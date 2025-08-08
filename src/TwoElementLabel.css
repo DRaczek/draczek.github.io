@@ -1,0 +1,10 @@
+.two_element_label label{
+    font-weight: 600;
+    width: 85px;
+    display: inline-block;
+    color: #5359da;
+}
+
+.two_element_label p{
+    display: inline-block;
+}

@@ -1,0 +1,45 @@
+
+.full-page{
+  width: 100vw;
+  height: 100vh;
+}
+
+.min-full-width{
+  min-width: 100vw;
+}
+
+.min-full-height{
+  min-height: 100vh;
+}
+
+.lh30{
+ line-height: 30px;
+}
+
+.lh35{
+ line-height: 35px;
+}
+
+.lh40{
+ line-height: 40px;
+}
+
+.lh45{
+ line-height: 45px;
+}
+
+.ls5{
+  letter-spacing: 5px;
+}
+
+.text-border{
+  text-shadow: "-1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black";
+}
+
+.fs60{
+  font-size: 60px;
+}
+
+.h33vh{
+  height: 33.33vh;
+}
