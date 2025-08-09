@@ -12,77 +12,35 @@ import { useGLTF } from "@react-three/drei";
 export function CityModel(props) {
   const { nodes, materials } = useGLTF("/city/Sketchfab_Scene.glb");
   return (
-    <group {...props} dispose={null} scale={[3, 3, 3]}>
-      <group position={[0.595, 0, 0.031]} scale={[0.9, 0.834, 0.9]}>
+    <group {...props} dispose={null} scale={3}>
+      <group position={[0.071, 0.001, -0.697]} scale={20}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Object_4.geometry}
-          material={materials.material}
-          position={[0, 0.382, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_5.geometry}
-          material={materials.red_light}
-          position={[-0.001, 0.75, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_6.geometry}
-          material={materials.logos}
-          position={[-0.045, 0.718, 0.142]}
+          geometry={nodes.Object_178001.geometry}
+          material={materials[".001"]}
+          position={[0.074, -0.013, 0.053]}
         />
       </group>
-      <group position={[-0.863, 0.002, -0.542]} scale={1.27}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_8.geometry}
-          material={materials.material}
-          position={[0, 0.729, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_9.geometry}
-          material={materials.logos}
-          position={[-0.146, 1.371, 0.129]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_10.geometry}
-          material={materials.red_light}
-          position={[0.002, 1.445, 0.001]}
-        />
-      </group>
+      <group position={[1.879, -0.003, 1.899]} />
       <group
-        position={[0.14, 0.001, -0.487]}
-        rotation={[-Math.PI, 0, -Math.PI]}
+        position={[0.617, -0.002, 0.388]}
+        rotation={[0, -1.571, 0]}
+        scale={0.936}
       >
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Object_12.geometry}
+          geometry={nodes.Object_45.geometry}
           material={materials.material}
-          position={[0, 0.636, 0.028]}
+          position={[0.047, 0.267, 0.034]}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Object_13.geometry}
-          material={materials.red_light}
-          position={[0.001, 1.102, 0.028]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_14.geometry}
+          geometry={nodes.Object_46.geometry}
           material={materials.logos}
-          position={[0.105, 1.205, -0.136]}
+          position={[0.085, 0.543, -0.024]}
         />
       </group>
       <group position={[-0.107, 0.002, -1.108]} scale={1.298}>
@@ -108,9 +66,32 @@ export function CityModel(props) {
           position={[-0.082, 1.644, -0.007]}
         />
       </group>
+      <group position={[0.14, 0.001, -0.487]} rotation={[Math.PI, 0, Math.PI]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_12.geometry}
+          material={materials.material}
+          position={[0, 0.636, 0.028]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_13.geometry}
+          material={materials.red_light}
+          position={[0.001, 1.102, 0.028]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_14.geometry}
+          material={materials.logos}
+          position={[0.105, 1.205, -0.136]}
+        />
+      </group>
       <group
         position={[-0.699, 0.341, 0.456]}
-        rotation={[0, Math.PI / 2, 0]}
+        rotation={[0, 1.571, 0]}
         scale={1.496}
       >
         <mesh
@@ -167,6 +148,22 @@ export function CityModel(props) {
           position={[0.028, 0.365, 0.004]}
         />
       </group>
+      <group position={[0.747, 0.287, -1.218]} scale={1.463}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_36.geometry}
+          material={materials.material}
+          position={[0, 0.719, 0]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_37.geometry}
+          material={materials.red_light}
+          position={[0, 1.356, 0]}
+        />
+      </group>
       <group position={[-0.358, 0, 0.894]} scale={[0.575, 0.55, 0.575]}>
         <mesh
           castShadow
@@ -199,77 +196,9 @@ export function CityModel(props) {
           position={[-0.119, 0.711, 0.119]}
         />
       </group>
-      <group position={[0.747, 0.287, -1.218]} scale={1.463}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_36.geometry}
-          material={materials.material}
-          position={[0, 0.719, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_37.geometry}
-          material={materials.red_light}
-          position={[0, 1.356, 0]}
-        />
-      </group>
-      <group position={[0.869, 0.001, 0.851]} scale={[0.057, 0.103, 0.057]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_39.geometry}
-          material={materials.material}
-          position={[0.727, 0.993, 0.741]}
-        />
-      </group>
-      <group position={[-1.234, -0.002, 0.425]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_41.geometry}
-          material={materials.material}
-          position={[0.001, 0.9, -0.001]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_42.geometry}
-          material={materials.red_light}
-          position={[-0.002, 1.783, -0.001]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_43.geometry}
-          material={materials.logos}
-          position={[-0.005, 1.765, 0.005]}
-        />
-      </group>
-      <group
-        position={[0.617, -0.002, 0.388]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={0.936}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_45.geometry}
-          material={materials.material}
-          position={[0.047, 0.267, 0.034]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_46.geometry}
-          material={materials.logos}
-          position={[0.085, 0.543, -0.024]}
-        />
-      </group>
       <group
         position={[-1.731, 0.005, 0.877]}
-        rotation={[-Math.PI, 0, -Math.PI]}
+        rotation={[Math.PI, 0, Math.PI]}
         scale={[1.471, 1.849, 1.471]}
       >
         <mesh
@@ -294,6 +223,31 @@ export function CityModel(props) {
           position={[0.001, 0.716, -0.033]}
         />
       </group>
+      <group position={[-1.234, -0.002, 0.425]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_41.geometry}
+          material={materials.material}
+          position={[0.001, 0.9, -0.001]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_43.geometry}
+          material={materials.logos}
+          position={[-0.005, 1.765, 0.005]}
+        />
+      </group>
+      <group position={[0.869, 0.001, 0.851]} scale={[0.057, 0.103, 0.057]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_39.geometry}
+          material={materials.material}
+          position={[0.727, 0.993, 0.741]}
+        />
+      </group>
       <group position={[1.567, 0, 0.296]} scale={[0.575, 0.55, 0.575]}>
         <mesh
           castShadow
@@ -305,7 +259,7 @@ export function CityModel(props) {
       </group>
       <group
         position={[-0.419, -0.001, 1.439]}
-        rotation={[0, Math.PI / 2, 0]}
+        rotation={[0, 1.571, 0]}
         scale={1.263}
       >
         <mesh
@@ -315,30 +269,10 @@ export function CityModel(props) {
           material={materials.material}
           position={[-0.018, 0.18, 0.025]}
         />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_55.geometry}
-          material={materials.logos}
-          position={[-0.134, 0.336, 0.032]}
-        />
-      </group>
-      <group
-        position={[-0.008, 0, 0.926]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={0.112}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_57.geometry}
-          material={materials.material}
-          position={[0.718, 1.675, 0]}
-        />
       </group>
       <group
         position={[0.285, 0, 0.854]}
-        rotation={[0, Math.PI / 2, 0]}
+        rotation={[0, 1.571, 0]}
         scale={0.096}
       >
         <mesh
@@ -374,7 +308,7 @@ export function CityModel(props) {
       </group>
       <group
         position={[1.202, -0.001, 0.826]}
-        rotation={[-Math.PI, 0, -Math.PI]}
+        rotation={[Math.PI, 0, Math.PI]}
         scale={1.263}
       >
         <mesh
@@ -392,76 +326,9 @@ export function CityModel(props) {
           position={[-0.134, 0.336, 0.032]}
         />
       </group>
-      <group position={[0.498, 0.003, -13.889]} scale={[1, 1, 1.892]} />
-      <group position={[0.172, 0.003, -13.835]} scale={[1, 1, 0.717]} />
-      <group position={[-0.373, 0.003, -13.034]} scale={[1, 1, 0.564]} />
-      <group position={[-0.783, 0.003, -12.44]} scale={[1, 1, 0.58]} />
-      <group position={[-1.118, 0.003, -13.106]} scale={[1, 1, 1.199]} />
-      <group position={[-1.665, 0.003, -12.869]} scale={[1, 1, 0.749]} />
-      <group position={[-1.799, 0.003, -10.599]} scale={[1, 1, 0.245]} />
-      <group position={[2.776, 0.003, -11.844]} scale={[1, 1, 0.47]} />
-      <group position={[2.45, 0.003, -13.6]} scale={[1, 1, 1.176]} />
-      <group position={[1.904, 0.003, -12.869]} scale={[1, 1, 0.548]} />
-      <group position={[1.494, 0.003, -11.245]} scale={[1, 1, 0.941]} />
-      <group position={[1.159, 0.003, -13.306]} scale={[1, 1, 0.646]} />
-      <group
-        position={[0.418, 0.003, -12.46]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 1.003]}
-      />
-      <group
-        position={[0.17, 0.003, -11.935]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 1.051]}
-      />
-      <group
-        position={[1.17, 0.003, -11.502]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.847]}
-      />
-      <group
-        position={[0.509, 0.003, -11.102]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.824]}
-      />
-      <group
-        position={[1.564, 0.003, -10.382]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.967]}
-      />
-      <group
-        position={[1.453, 0.003, -9.918]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.925]}
-      />
-      <group
-        position={[1.731, 0.003, -14.851]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.824]}
-      />
-      <group
-        position={[2.995, 0.003, -14.313]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.985]}
-      />
-      <group
-        position={[0.137, 0.003, -13.883]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.832]}
-      />
-      <group
-        position={[2.66, 0.003, -13.627]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 1.154]}
-      />
-      <group
-        position={[0.496, 0.003, -13.077]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.802]}
-      />
       <group
         position={[-0.318, -0.001, 0.426]}
-        rotation={[0, Math.PI / 2, 0]}
+        rotation={[0, 1.571, 0]}
         scale={1.263}
       >
         <mesh
@@ -479,110 +346,6 @@ export function CityModel(props) {
           position={[-0.134, 0.336, 0.032]}
         />
       </group>
-      <group position={[-2.312, -0.003, 1.434]} scale={2.346}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_165.geometry}
-          material={materials.material}
-          position={[0.032, 0.194, 0.004]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_166.geometry}
-          material={materials.red_light}
-          position={[0.028, 0.365, 0.004]}
-        />
-      </group>
-      <group
-        position={[1.652, -0.508, -0.627]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={1.24}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_168.geometry}
-          material={materials.material}
-          position={[0, 0.729, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_169.geometry}
-          material={materials.logos}
-          position={[-0.146, 1.371, 0.129]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_170.geometry}
-          material={materials.red_light}
-          position={[0.002, 1.445, 0.001]}
-        />
-      </group>
-      <group position={[2.348, -0.128, -0.492]} scale={[0.9, 0.834, 0.9]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_172.geometry}
-          material={materials.material}
-          position={[0, 0.382, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_173.geometry}
-          material={materials.red_light}
-          position={[-0.001, 0.75, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_174.geometry}
-          material={materials.logos}
-          position={[-0.045, 0.718, 0.142]}
-        />
-      </group>
-      <group position={[-0.277, 0, -1.903]} scale={0.096}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_176.geometry}
-          material={materials.material}
-          position={[0, 3.921, 0]}
-        />
-      </group>
-      <group position={[0.071, 0.001, -0.697]} scale={20}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_178_1.geometry}
-          material={materials[".001"]}
-          position={[0.074, -0.013, 0.053]}
-        />
-      </group>
-      <group
-        position={[1.913, -0.001, -2.438]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={1.263}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_180.geometry}
-          material={materials.material}
-          position={[-0.018, 0.18, 0.025]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_181.geometry}
-          material={materials.logos}
-          position={[-0.134, 0.336, 0.032]}
-        />
-      </group>
       <group
         position={[1.989, 0, -0.498]}
         rotation={[0, Math.PI / 2, 0]}
@@ -596,259 +359,6 @@ export function CityModel(props) {
           position={[0, 0.363, 0.043]}
         />
       </group>
-      <group
-        position={[-12.836, 0.003, -1.696]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 1.892]}
-      />
-      <group
-        position={[-12.51, 0.003, -1.995]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.717]}
-      />
-      <group
-        position={[-11.965, 0.003, -2.796]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.564]}
-      />
-      <group
-        position={[-11.555, 0.003, -3.39]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.58]}
-      />
-      <group
-        position={[-11.22, 0.003, -2.724]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 1.199]}
-      />
-      <group
-        position={[-10.673, 0.003, -2.961]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.749]}
-      />
-      <group
-        position={[-10.126, 0.003, -4.777]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.245]}
-      />
-      <group
-        position={[-15.114, 0.003, -3.986]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.47]}
-      />
-      <group
-        position={[-14.788, 0.003, -2.23]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 1.176]}
-      />
-      <group
-        position={[-14.242, 0.003, -2.962]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.548]}
-      />
-      <group
-        position={[-13.832, 0.003, -4.585]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.941]}
-      />
-      <group
-        position={[-13.497, 0.003, -2.525]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.646]}
-      />
-      <group
-        position={[-12.756, 0.003, -3.37]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.003]}
-      />
-      <group
-        position={[-12.508, 0.003, -3.895]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.051]}
-      />
-      <group
-        position={[-13.508, 0.003, -4.329]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.847]}
-      />
-      <group
-        position={[-12.847, 0.003, -4.729]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.824]}
-      />
-      <group
-        position={[-13.901, 0.003, -5.448]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.967]}
-      />
-      <group
-        position={[-13.791, 0.003, -5.913]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.925]}
-      />
-      <group
-        position={[-14.939, 0.003, -3.388]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.824]}
-      />
-      <group
-        position={[-16.203, 0.003, -3.926]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.985]}
-      />
-      <group
-        position={[-13.344, 0.003, -4.356]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 0.832]}
-      />
-      <group
-        position={[-15.867, 0.003, -4.612]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.154]}
-      />
-      <group
-        position={[-12.323, 0.003, -2.839]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.992]}
-      />
-      <group
-        position={[-9.04, 0.003, -6.878]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 1.549]}
-      />
-      <group
-        position={[-8.628, 0.003, -6.543]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.717]}
-      />
-      <group
-        position={[-8.083, 0.003, -7.344]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.564]}
-      />
-      <group
-        position={[-7.673, 0.003, -7.938]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.58]}
-      />
-      <group
-        position={[-7.338, 0.003, -7.272]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 1.199]}
-      />
-      <group
-        position={[-6.791, 0.003, -7.509]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.749]}
-      />
-      <group
-        position={[-11.232, 0.003, -8.534]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.47]}
-      />
-      <group
-        position={[-10.906, 0.003, -6.778]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 1.176]}
-      />
-      <group
-        position={[-10.36, 0.003, -7.509]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.548]}
-      />
-      <group
-        position={[-9.95, 0.003, -9.133]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.941]}
-      />
-      <group
-        position={[-9.615, 0.003, -7.072]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[1, 1, 0.646]}
-      />
-      <group
-        position={[-10.897, 0.003, -7.89]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.727]}
-      />
-      <group
-        position={[-10.47, 0.003, -8.414]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.81]}
-      />
-      <group
-        position={[-12.192, 0.003, -8.848]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.459]}
-      />
-      <group
-        position={[-11.054, 0.003, -9.248]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.419]}
-      />
-      <group
-        position={[-12.869, 0.003, -9.968]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.666]}
-      />
-      <group
-        position={[-12.678, 0.003, -10.432]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.594]}
-      />
-      <group
-        position={[-13.158, 0.003, -5.498]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.419]}
-      />
-      <group
-        position={[-10.413, 0.003, -6.467]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.433]}
-      />
-      <group
-        position={[-14.757, 0.003, -6.723]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.987]}
-      />
-      <group
-        position={[-11.03, 0.003, -7.272]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 1, 1.38]}
-      />
-      <group position={[-2.287, -0.009, -6.352]} scale={24.478}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Object_273.geometry}
-          material={materials[".002"]}
-          position={[0.131, 0, 0.229]}
-          scale={[0.493, 1, 0.674]}
-        />
-      </group>
-      <group
-        position={[1.137, 0.003, -9.049]}
-        rotation={[0, Math.PI / 2, 0]}
-        scale={[1, 1, 0.489]}
-      />
-      <group
-        position={[3.239, 0.003, -9.578]}
-        rotation={[-Math.PI, 1.005, -Math.PI]}
-        scale={[1, 1, 0.385]}
-      />
-      <group
-        position={[-0.934, 0.003, -9.494]}
-        rotation={[0, 1.069, 0]}
-        scale={[1, 1, 0.385]}
-      />
-      <group position={[-2.339, 0.003, -11.625]} scale={[1, 1, 0.749]} />
-      <group
-        position={[-10.663, 0.003, -0.709]}
-        rotation={[-Math.PI, 0.419, -Math.PI]}
-        scale={[1, 1, 1.199]}
-      />
-      <group position={[1.879, -0.003, 1.899]} />
-      <group position={[1.417, 0.001, -13.448]} scale={[0.259, 0.443, 0.24]} />
       <group position={[1.199, 0.001, 0.076]} scale={[0.259, 0.443, 0.24]}>
         <mesh
           castShadow
@@ -856,6 +366,22 @@ export function CityModel(props) {
           geometry={nodes.Object_289.geometry}
           material={materials["1.001"]}
           position={[-3.215, 0.583, 4.098]}
+        />
+      </group>
+      <group position={[0.595, 0, 0.031]} scale={[0.9, 0.834, 0.9]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_4.geometry}
+          material={materials.material}
+          position={[0, 0.382, 0]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_6.geometry}
+          material={materials.logos}
+          position={[-0.045, 0.718, 0.142]}
         />
       </group>
       <mesh
@@ -1061,6 +587,76 @@ export function CityModel(props) {
         position={[0.244, 0.003, -0.937]}
         rotation={[0, Math.PI / 2, 0]}
         scale={[1, 1, 1.111]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_8.geometry}
+        material={materials.material}
+        position={[0, 0.729, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_9.geometry}
+        material={materials.logos}
+        position={[-0.146, 1.371, 0.129]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_10.geometry}
+        material={materials.red_light}
+        position={[0.002, 1.445, 0.001]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_165.geometry}
+        material={materials.material}
+        position={[0.032, 0.194, 0.004]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_166.geometry}
+        material={materials.red_light}
+        position={[0.028, 0.365, 0.004]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_168.geometry}
+        material={materials.material}
+        position={[0, 0.729, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_169.geometry}
+        material={materials.logos}
+        position={[-0.146, 1.371, 0.129]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_170.geometry}
+        material={materials.red_light}
+        position={[0.002, 1.445, 0.001]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_172.geometry}
+        material={materials.material}
+        position={[0, 0.382, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_174.geometry}
+        material={materials.logos}
+        position={[-0.045, 0.718, 0.142]}
       />
     </group>
   );
