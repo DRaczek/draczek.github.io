@@ -31,6 +31,8 @@ const LandingPage = () => {
     "Always moving forward.",
   ]);
   const navigate = useNavigate();
+  const [showModel, setShowModel] = useState(false);
+  const [ismodelReady, setIsModelReady] = useState(false);
 
   function collapse() {
     const tl = gsap.timeline();
@@ -134,6 +136,15 @@ const LandingPage = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (ismodelReady) {
+      collapse();
+      setTimeout(() => {
+        navigate("/more");
+      }, 1500);
+    }
+  }, [ismodelReady]);
+
   return (
     <div id="frontLayerWrapper">
       <section id="frontLayer">
@@ -174,47 +185,23 @@ const LandingPage = () => {
             <Environment resolution={256}>
               <group rotation={[-Math.PI / 3, 4, 1]}>
                 <Lightformer
-                  form={"circle"}
-                  intensity={3}
+                  form="circle"
+                  intensity={2}
                   position={[-10, 0, 0]}
-                  scale={10}
-                ></Lightformer>
+                  scale={15}
+                />
                 <Lightformer
-                  form={"circle"}
-                  intensity={3}
+                  form="circle"
+                  intensity={1.5}
                   position={[-10, 5, 0]}
-                  scale={10}
-                ></Lightformer>
+                  scale={15}
+                />
                 <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, -5, 0]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, 0, 10]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, 0, -10]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-5, -5, -5]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-5, -5, 5]}
-                  scale={10}
-                ></Lightformer>
+                  form="circle"
+                  intensity={1.5}
+                  position={[-5, -5, 0]}
+                  scale={15}
+                />
               </group>
             </Environment>
           </Canvas>
@@ -264,10 +251,7 @@ const LandingPage = () => {
                   ref={checkMoreButtonRef}
                   className="flex-fill d-flex align-items-center justify-content-end h2 pe-5 mb-0 checkMoreButton"
                   onClick={() => {
-                    collapse();
-                    setTimeout(() => {
-                      navigate("/more");
-                    }, 1500);
+                    setShowModel(true);
                   }}
                 >
                   Check More ⇲
@@ -277,68 +261,51 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <Canvas
-          className="full-page position-fixed overflow-visible"
-          ref={cavasRef}
-          id="canvas"
-          style={{
-            top: "-105vh",
-            zIndex: 2,
-          }}
-          shadows
-          camera={{ position: [0, 0, 10], fov: 50, near: 1, far: 20 }}
-        >
-          <group>
-            <JumpAnimation setTriggerAnimation={setTriggerAnimation} />
-          </group>
-
-          <Environment resolution={256}>
-            <group rotation={[-Math.PI / 3, 4, 1]}>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-10, 0, 0]}
-                scale={10}
-              ></Lightformer>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-10, 5, 0]}
-                scale={10}
-              ></Lightformer>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-10, -5, 0]}
-                scale={10}
-              ></Lightformer>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-10, 0, 10]}
-                scale={10}
-              ></Lightformer>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-10, 0, -10]}
-                scale={10}
-              ></Lightformer>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-5, -5, -5]}
-                scale={10}
-              ></Lightformer>
-              <Lightformer
-                form={"circle"}
-                intensity={3}
-                position={[-5, -5, 5]}
-                scale={10}
-              ></Lightformer>
+        {showModel && (
+          <Canvas
+            gl={{ antialias: false }}
+            dpr={[1, 1.5]}
+            className="full-page position-fixed overflow-visible"
+            ref={cavasRef}
+            id="canvas"
+            style={{
+              top: "-105vh",
+              zIndex: 2,
+            }}
+            shadows
+            camera={{ position: [0, 0, 10], fov: 50, near: 1, far: 20 }}
+          >
+            <group>
+              <JumpAnimation
+                setTriggerAnimation={setTriggerAnimation}
+                modelReadySetter={setIsModelReady}
+              />
             </group>
-          </Environment>
-        </Canvas>
+
+            <Environment resolution={256}>
+              <group rotation={[-Math.PI / 3, 4, 1]}>
+                <Lightformer
+                  form="circle"
+                  intensity={2}
+                  position={[-10, 0, 0]}
+                  scale={15}
+                />
+                <Lightformer
+                  form="circle"
+                  intensity={1.5}
+                  position={[-10, 5, 0]}
+                  scale={15}
+                />
+                <Lightformer
+                  form="circle"
+                  intensity={1.5}
+                  position={[-5, -5, 0]}
+                  scale={15}
+                />
+              </group>
+            </Environment>
+          </Canvas>
+        )}
       </section>
     </div>
   );
