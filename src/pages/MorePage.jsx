@@ -55,6 +55,7 @@ function MorePage() {
             </button>
           </div>
           <Canvas
+            dpr={0.7}
             id="landing-canvas"
             className="position-absolute"
             style={{
@@ -76,54 +77,8 @@ function MorePage() {
               minDistance={6}
             />
             <EffectComposer>
-              <Bloom luminanceThreshold={0.3} intensity={8} />
+              <Bloom luminanceThreshold={0.3} intensity={3} />
             </EffectComposer>
-            <Environment resolution={256}>
-              <group rotation={[-Math.PI / 3, 4, 1]}>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, 0, 0]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, 5, 0]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, -5, 0]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, 0, 10]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-10, 0, -10]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-5, -5, -5]}
-                  scale={10}
-                ></Lightformer>
-                <Lightformer
-                  form={"circle"}
-                  intensity={3}
-                  position={[-5, -5, 5]}
-                  scale={10}
-                ></Lightformer>
-              </group>
-            </Environment>
           </Canvas>
         </div>
       </div>
@@ -192,50 +147,26 @@ function MorePage() {
                       <HeadModel />
                     </group>
 
-                    <Environment resolution={256}>
+                    <Environment resolution={32} frames={1}>
                       <group rotation={[-Math.PI / 3, 4, 1]}>
                         <Lightformer
-                          form={"circle"}
-                          intensity={3}
+                          form="circle"
+                          intensity={2}
                           position={[-10, 0, 0]}
-                          scale={10}
-                        ></Lightformer>
+                          scale={15}
+                        />
                         <Lightformer
-                          form={"circle"}
-                          intensity={3}
+                          form="circle"
+                          intensity={1.5}
                           position={[-10, 5, 0]}
-                          scale={10}
-                        ></Lightformer>
+                          scale={15}
+                        />
                         <Lightformer
-                          form={"circle"}
-                          intensity={3}
-                          position={[-10, -5, 0]}
-                          scale={10}
-                        ></Lightformer>
-                        <Lightformer
-                          form={"circle"}
-                          intensity={3}
-                          position={[-10, 0, 10]}
-                          scale={10}
-                        ></Lightformer>
-                        <Lightformer
-                          form={"circle"}
-                          intensity={3}
-                          position={[-10, 0, -10]}
-                          scale={10}
-                        ></Lightformer>
-                        <Lightformer
-                          form={"circle"}
-                          intensity={3}
-                          position={[-5, -5, -5]}
-                          scale={10}
-                        ></Lightformer>
-                        <Lightformer
-                          form={"circle"}
-                          intensity={3}
-                          position={[-5, -5, 5]}
-                          scale={10}
-                        ></Lightformer>
+                          form="circle"
+                          intensity={1.5}
+                          position={[-5, -5, 0]}
+                          scale={15}
+                        />
                       </group>
                     </Environment>
                   </Canvas>

@@ -7,33 +7,60 @@ Title: Need some space?
 */
 
 import { useGLTF } from "@react-three/drei";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import * as THREE from "three";
 
 export function SpaceModel(props) {
-  const { nodes, materials } = useGLTF("/space/need_some_space.glb");
+  const { nodes } = useGLTF("/space/need_some_space.glb");
+  const [optimizedGeometry, setOptimizedGeometry] = useState(null);
 
   useEffect(() => {
-    const geometry = nodes.Object_2.geometry;
-    const colors = geometry.attributes.color;
-    console.log(colors);
-    const arr = colors.array;
+    const sourceGeo = nodes.Object_2.geometry;
+    const pos = sourceGeo.attributes.position;
+    const col = sourceGeo.attributes.color;
 
-    for (let i = 0; i < arr.length; i++) {
-      arr[i] = Math.min(Math.pow(arr[i], 0.6) * 2.2, 1.0);
+    const pointCount = pos.count;
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    const step = isMobile ? 5 : 2; // renders every X points on different devices
+
+    const newPositions = [];
+    const newColors = [];
+
+    for (let i = 0; i < pointCount; i += step) {
+      newPositions.push(pos.getX(i), pos.getY(i), pos.getZ(i));
+      if (col) {
+        newColors.push(col.getX(i), col.getY(i), col.getZ(i));
+      }
     }
 
-    colors.needsUpdate = true;
-  }, []);
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(newPositions, 3)
+    );
+
+    if (col) {
+      geometry.setAttribute(
+        "color",
+        new THREE.Float32BufferAttribute(newColors, 3)
+      );
+    }
+
+    setOptimizedGeometry(geometry);
+  }, [nodes]);
+
+  if (!optimizedGeometry) return null;
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.013}>
-        <points geometry={nodes.Object_2.geometry}>
+        <points geometry={optimizedGeometry}>
           <pointsMaterial
             size={0.01}
-            sizeAttenuation
+            sizeAttenuation={false}
             transparent
-            blending={THREE.AdditiveBlending}
+            blending={THREE.NormalBlending}
             depthWrite={false}
             vertexColors
             opacity={0.5}
