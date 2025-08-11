@@ -24,6 +24,21 @@ function MorePage() {
   const aboutSectionRef = useRef(null);
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
+  const [shouldRender, setShouldRender] = useState(true);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const viewportHeight = window.innerHeight;
+      setShouldRender(scrollY < 1.1 * viewportHeight);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="bg-black min-full-height container-fluid text-white pb-5">
       <div className="row min-full-height">
@@ -56,13 +71,13 @@ function MorePage() {
             </button>
           </div>
           <Canvas
+            frameloop={shouldRender ? "always" : "demand"}
             dpr={0.7}
             id="landing-canvas"
             className="position-absolute"
             style={{
               zIndex: 0,
             }}
-            shadows
             camera={{ position: [5, 10, 10], fov: 40 }}
           >
             <group>
@@ -77,8 +92,8 @@ function MorePage() {
               maxDistance={20}
               minDistance={6}
             />
-            <EffectComposer>
-              <Bloom luminanceThreshold={0.3} intensity={3} />
+            <EffectComposer multisampling={2}>
+              <Bloom levels={5} luminanceThreshold={0.3} intensity={3} />
             </EffectComposer>
           </Canvas>
         </div>
