@@ -182,7 +182,7 @@ const LandingPage = () => {
               <CityModel />
             </group>
 
-            <Environment resolution={256}>
+            <Environment resolution={128} frames={1}>
               <group rotation={[-Math.PI / 3, 4, 1]}>
                 <Lightformer
                   form="circle"
@@ -282,7 +282,7 @@ const LandingPage = () => {
               />
             </group>
 
-            <Environment resolution={256}>
+            <Environment resolution={128} frames={30}>
               <group rotation={[-Math.PI / 3, 4, 1]}>
                 <Lightformer
                   form="circle"
