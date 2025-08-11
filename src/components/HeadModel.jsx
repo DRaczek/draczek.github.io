@@ -14,8 +14,13 @@ export function HeadModel(props) {
   const rightEyeRef = useRef();
 
   const [mousePos, setMousePos] = useState({ x: 0 });
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
+    if (isMobile) {
+      return;
+    }
+
     const handleMouseMove = (e) => {
       const x = (e.clientX / window.innerWidth) * 2 - 1; // z zakresu [0, 1] → [-1, 1]
       setMousePos({ x });
@@ -32,11 +37,11 @@ export function HeadModel(props) {
       box.getCenter(center);
       groupRef.current.position.sub(center); // przesuwa model tak, by jego środek był w (0, 0, 0)
     }
-    console.log(nodes);
   }, []);
 
   //Animacja oczu – podążanie za kursorem
   useFrame(() => {
+    if (isMobile) return;
     const rotY = THREE.MathUtils.clamp(mousePos.x * 0.2, -0.1, 0.1);
     if (leftEyeRef.current) leftEyeRef.current.rotation.y = rotY;
     if (rightEyeRef.current) rightEyeRef.current.rotation.y = rotY;
@@ -67,20 +72,14 @@ export function HeadModel(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Wolf3D_Head.geometry}
-        material={materials.Wolf3D_Skin}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Wolf3D_Teeth.geometry}
-        material={materials.Wolf3D_Teeth}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.Wolf3D_Hair.geometry}
         material={materials.Wolf3D_Hair}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Wolf3D_Head.geometry}
+        material={materials.Wolf3D_Skin}
       />
       <mesh
         castShadow

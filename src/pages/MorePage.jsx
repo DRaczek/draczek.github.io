@@ -10,7 +10,7 @@ import { HeadModel } from "../components/HeadModel";
 import "../more.css";
 import "../about.css";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import { useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import TwoElementLabel from "../components/TwoElementLabel";
@@ -22,6 +22,7 @@ import Projects from "../components/Projects";
 gsap.registerPlugin(ScrollToPlugin);
 function MorePage() {
   const aboutSectionRef = useRef(null);
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
   return (
     <div className="bg-black min-full-height container-fluid text-white pb-5">
@@ -136,40 +137,48 @@ function MorePage() {
 
               <div className="col-lg-6">
                 <div className="about-avatar">
-                  <Canvas
-                    style={{
-                      height: "400px",
-                    }}
-                    shadows
-                    camera={{ position: [0, 1, 10], fov: 35, near: 1, far: 20 }}
-                  >
-                    <group>
-                      <HeadModel />
-                    </group>
-
-                    <Environment resolution={32} frames={1}>
-                      <group rotation={[-Math.PI / 3, 4, 1]}>
-                        <Lightformer
-                          form="circle"
-                          intensity={2}
-                          position={[-10, 0, 0]}
-                          scale={15}
-                        />
-                        <Lightformer
-                          form="circle"
-                          intensity={1.5}
-                          position={[-10, 5, 0]}
-                          scale={15}
-                        />
-                        <Lightformer
-                          form="circle"
-                          intensity={1.5}
-                          position={[-5, -5, 0]}
-                          scale={15}
-                        />
+                  {isMobile == true ? (
+                    <img src="/avatar_mobile.png" style={{ height: "400px" }} />
+                  ) : (
+                    <Canvas
+                      style={{
+                        height: "400px",
+                      }}
+                      camera={{
+                        position: [0, 1, 10],
+                        fov: 35,
+                        near: 1,
+                        far: 20,
+                      }}
+                    >
+                      <group>
+                        <HeadModel />
                       </group>
-                    </Environment>
-                  </Canvas>
+
+                      <Environment resolution={32} frames={1}>
+                        <group rotation={[-Math.PI / 3, 4, 1]}>
+                          <Lightformer
+                            form="circle"
+                            intensity={2}
+                            position={[-10, 0, 0]}
+                            scale={15}
+                          />
+                          <Lightformer
+                            form="circle"
+                            intensity={1.5}
+                            position={[-10, 5, 0]}
+                            scale={15}
+                          />
+                          <Lightformer
+                            form="circle"
+                            intensity={1.5}
+                            position={[-5, -5, 0]}
+                            scale={15}
+                          />
+                        </group>
+                      </Environment>
+                    </Canvas>
+                  )}
                 </div>
               </div>
             </div>
