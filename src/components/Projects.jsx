@@ -75,7 +75,7 @@ export default function Projects() {
         <Project
           addToRefs={addToRefs}
           link="https://github.com/DRaczek/dRaczekProjekt"
-          title="2023 - Online Store - school project - web app"
+          title="2023 - Online Store - School project - Web app"
           badges={[
             "HTML",
             "CSS",

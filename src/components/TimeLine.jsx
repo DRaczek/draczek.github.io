@@ -73,8 +73,27 @@ const Timeline = () => {
       <div className="timeline-line" ref={lineRef}></div>
 
       <div
-        className="timeline-item left"
+        className="timeline-item right"
         ref={(el) => (itemsRef.current[0] = el)}
+      >
+        <a className="timeline-logo" href="https://www.wsb-nlu.edu.pl/">
+          <img src="/wsb_logo.png" alt="WSB NLU" />
+        </a>
+        <div className="card shadow-sm p-4">
+          <h5 className="fw-bold">
+            October 2025
+            <br />
+            I applied for an engineering degree in Computer Science with a
+            specialization in Business Application Development.
+            <br />
+            WSB-NLU
+          </h5>
+        </div>
+      </div>
+
+      <div
+        className="timeline-item left"
+        ref={(el) => (itemsRef.current[1] = el)}
       >
         <a
           className="timeline-logo"
@@ -101,7 +120,7 @@ const Timeline = () => {
 
       <div
         className="timeline-item right"
-        ref={(el) => (itemsRef.current[1] = el)}
+        ref={(el) => (itemsRef.current[2] = el)}
       >
         <a className="timeline-logo" href="https://newdef.pl/">
           <img src="/favicon_newdef.png" alt="NEWDEF" />
@@ -124,7 +143,7 @@ const Timeline = () => {
 
       <div
         className="timeline-item left"
-        ref={(el) => (itemsRef.current[2] = el)}
+        ref={(el) => (itemsRef.current[3] = el)}
       >
         <a className="timeline-logo" href="https://zstio.edu.pl/">
           <img src="/zstio_logo.png" alt="ZSTiO Limanowa" />
