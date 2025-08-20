@@ -1,6 +1,6 @@
-import './App.css';
-import './customClasses.css';
-import './background.scss';
+import './css/App.css';
+import './css/customClasses.css';
+import './css/background.scss';
 import ContactPage from './pages/ContactPage';
 import LandingPage from './pages/LandingPage';
 import OptionsPage from './pages/OptionsPage';

@@ -7,8 +7,8 @@ import {
 import { Canvas } from "@react-three/fiber";
 import { SpaceModel } from "../components/SpaceModel";
 import { HeadModel } from "../components/HeadModel";
-import "../more.css";
-import "../about.css";
+import "../css/more.css";
+import "../css/about.css";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { useEffect, useReducer, useRef, useState } from "react";
 import gsap from "gsap";

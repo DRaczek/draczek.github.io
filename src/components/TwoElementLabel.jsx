@@ -1,5 +1,5 @@
 import React from "react";
-import "../TwoElementLabel.css";
+import "../css/TwoElementLabel.css";
 
 function TwoElementLabel({
   containerClassName,
