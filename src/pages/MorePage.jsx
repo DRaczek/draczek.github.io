@@ -5,18 +5,16 @@ import {
   OrbitControls,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { SpaceModel } from "../components/SpaceModel";
-import { HeadModel } from "../components/HeadModel";
+import { SpaceModel } from "../three/models/SpaceModel";
+import { HeadModel } from "../three/models/HeadModel";
 import "../css/more.css";
 import "../css/about.css";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import TwoElementLabel from "../components/TwoElementLabel";
-import { HelixCurve } from "three/examples/jsm/curves/CurveExtras.js";
 import Timeline from "../components/TimeLine";
-import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 
 gsap.registerPlugin(ScrollToPlugin);

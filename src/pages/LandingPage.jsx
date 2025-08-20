@@ -1,13 +1,13 @@
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { AmbientLight } from "three/webgpu";
 import { Environment, Lightformer } from "@react-three/drei";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { JumpAnimation } from "../components/JumpAnimation";
-import { CityModel } from "../components/CityModel";
+import { JumpAnimation } from "../three/models/JumpAnimation";
+import { CityModel } from "../three/models/CityModel";
 import { useNavigate } from "react-router-dom";
-import { CameraController } from "../components/CameraController";
-import LoaderOverlay from "../components/LoaderOverlay";
+import { CameraController } from "../three/helpers/CameraController";
+import LoaderOverlay from "../three/helpers/LoaderOverlay";
 import { TextPlugin } from "gsap/all";
 
 gsap.registerPlugin(TextPlugin);
