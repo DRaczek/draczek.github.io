@@ -1,6 +1,5 @@
 import './css/App.css';
 import './css/customClasses.css';
-import './css/background.scss';
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MorePage from './pages/MorePage';
