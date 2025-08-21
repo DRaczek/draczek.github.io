@@ -2,7 +2,7 @@ import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-export function CameraController() {
+export function CityCameraController() {
   const { camera } = useThree();
   const tl = useRef(null);
 

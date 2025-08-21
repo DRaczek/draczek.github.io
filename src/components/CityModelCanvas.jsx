@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { CameraController } from "../three/helpers/CameraController";
+import { CityCameraController } from "../three/helpers/CityCameraController";
 import { CityModel } from "../three/models/CityModel";
 import { Environment, Lightformer } from "@react-three/drei";
 
@@ -17,7 +17,7 @@ const CityModelCanvas = () => {
         far: 100,
       }}
     >
-      <CameraController />
+      <CityCameraController />
       <group>
         <CityModel />
       </group>

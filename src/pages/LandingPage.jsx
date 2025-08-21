@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useNavigate } from "react-router-dom";
-import LoaderOverlay from "../three/helpers/LoaderOverlay";
+import ModelLoaderOverlay from "../three/helpers/ModelLoaderOverlay";
 import { TextPlugin } from "gsap/all";
 import CityModelCanvas from "../components/CityModelCanvas";
 import TypeWriterEffectText from "../components/TypeWriterEffectText";
@@ -119,7 +119,7 @@ const LandingPage = () => {
   return (
     <div id="frontLayerWrapper">
       <section id="frontLayer">
-        <LoaderOverlay />
+        <ModelLoaderOverlay />
 
         <div
           className="bg-black full-page overflow-hidden position-fixed"
