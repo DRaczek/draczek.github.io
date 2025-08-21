@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/Projects.css";
 import Project from "./Project";
 
 gsap.registerPlugin(ScrollTrigger);
-
 export default function Projects() {
   const cardsRef = useRef([]);
 
@@ -18,7 +17,7 @@ export default function Projects() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: card,
-          start: "top 90%", // animacja gdy górna krawędź karty jest w 80% wysokości ekranu
+          start: "top 90%",
           toggleActions: "play none none reverse",
         },
       });
