@@ -7,22 +7,21 @@ Title: Need some space?
 */
 
 import { useGLTF } from "@react-three/drei";
-import { useEffect, useState } from "react";
+import { useMemo, useEffect } from "react";
 import * as THREE from "three";
+
+const IS_MOBILE = /Mobi|Android/i.test(navigator.userAgent);
 
 export function SpaceModel(props) {
   const { nodes } = useGLTF("/space/need_some_space.glb");
-  const [optimizedGeometry, setOptimizedGeometry] = useState(null);
 
-  useEffect(() => {
+  const optimizedGeometry = useMemo(() => {
     const sourceGeo = nodes.Object_2.geometry;
     const pos = sourceGeo.attributes.position;
     const col = sourceGeo.attributes.color;
 
     const pointCount = pos.count;
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-    const step = isMobile ? 5 : 2; // renders every X points on different devices
+    const step = IS_MOBILE ? 5 : 2; // renders every Xth point depending on device
 
     const newPositions = [];
     const newColors = [];
@@ -37,23 +36,33 @@ export function SpaceModel(props) {
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute(
       "position",
-      new THREE.Float32BufferAttribute(newPositions, 3)
+      new THREE.Float32BufferAttribute(newPositions, 3).setUsage(
+        THREE.StaticDrawUsage
+      )
     );
 
     if (col) {
       geometry.setAttribute(
         "color",
-        new THREE.Float32BufferAttribute(newColors, 3)
+        new THREE.Float32BufferAttribute(newColors, 3).setUsage(
+          THREE.StaticDrawUsage
+        )
       );
     }
 
-    setOptimizedGeometry(geometry);
+    return geometry;
   }, [nodes]);
+
+  useEffect(() => {
+    return () => {
+      optimizedGeometry?.dispose();
+    };
+  }, [optimizedGeometry]);
 
   if (!optimizedGeometry) return null;
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.013}>
         <points geometry={optimizedGeometry}>
           <pointsMaterial

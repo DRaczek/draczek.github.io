@@ -6,7 +6,6 @@ Source: https://sketchfab.com/3d-models/low-poly-city-night-885d8034bc02407fb48c
 Title: Low-poly City Night
 */
 
-import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function CityModel(props) {

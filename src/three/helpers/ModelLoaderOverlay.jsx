@@ -2,7 +2,7 @@ import { useProgress } from "@react-three/drei";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-export default function LoaderOverlay() {
+export default function ModelLoaderOverlay() {
   const { progress } = useProgress();
   const loaderRef = useRef();
 
@@ -29,7 +29,7 @@ export default function LoaderOverlay() {
         height: "100vh",
       }}
     >
-      <div className="loader-text">Ładowanie: {Math.floor(progress)}%</div>
+      <div className="loader-text">Loading: {Math.floor(progress)}%</div>
     </div>
   );
 }

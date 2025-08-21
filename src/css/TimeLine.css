@@ -4,7 +4,6 @@
   margin: 0 auto;
 }
 
-/* Central vertical line */
 .timeline-line {
   position: absolute;
   top: 0;
@@ -12,12 +11,10 @@
   transform-origin: top;
   width: 4px;
   height: 100%;
-  /* background-color: #0d6efd; */
   z-index: 0;
   background: linear-gradient(to bottom, #0d6efd 40%, transparent 100%);
 }
 
-/* Timeline item */
 .timeline-item {
   position: relative;
   width: 50%;
@@ -25,7 +22,6 @@
   opacity: 0;
 }
 
-/* Card appearance */
 .timeline-item .card {
   background: white;
   border-left: 6px solid #0d6efd;
@@ -54,11 +50,10 @@
   margin-right: auto;
 }
 
-/* LOGO over center line */
 .timeline-logo {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%) ; /* move above line */
+  transform: translate(-50%, -50%) ;
   z-index: 3;
   width: 60px;
   height: 60px;
@@ -87,10 +82,9 @@
   object-fit: cover;
 }
 
-/* Mobile support */
 @media (max-width: 768px) {
     .timeline {
-        margin-left: 20px; /* lekko przesuwamy linię */
+        margin-left: 20px;
     }
 
   .timeline-item,

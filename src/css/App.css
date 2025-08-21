@@ -1,0 +1,39 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#frontLayerWrapper{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1a008f 0%, #100b00 100%);
+}
+
+hr{
+  height: 3px;
+  background-color: white;
+  opacity: 1 !important;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+
+.checkMoreButton{
+ background: linear-gradient(to left, var(--myColor1), var(--myColor2));
+ transition: --myColor1 1s;
+ cursor:pointer;
+}
+
+.checkMoreButton:hover{
+  --myColor1: rgba(0, 0, 0, 0.8);
+}
+
