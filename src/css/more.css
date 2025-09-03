@@ -24,11 +24,11 @@
 }
 
 #check_more_button:hover span:first-child {
-  padding-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 #check_more_button:hover span:last-child {
-  opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 
