@@ -150,7 +150,7 @@ const LandingPage = () => {
             <div className="h-100">
               <div
                 ref={nameRef}
-                className="m-0 p-0 ps-2 ps-md-3 ps-lg-5 ls5 text-border lh45 fs60"
+                className="m-0 p-0 ps-3 ps-md-3 ps-lg-5 ls5 text-border lh45 fs60"
               >
                 <div className="row mb-3 fs-4 d-flex align-items-end lh30">
                   <TypeWriterEffectText selectedWords={ABOVE_NAME_WORDS} />
@@ -158,8 +158,8 @@ const LandingPage = () => {
                 <div className="row">Damian Raczek</div>
               </div>
               <hr className="d-block m-0 p-0" ref={lineRef} />
-              <div className="d-flex flex-row mb-0">
-                <div className="flex-fill d-flex ps-0 ps-md-3 ps-lg-5 ms-0 ms-md-3 ms-lg-5 h-100">
+              <div className="d-flex flex-column flex-md-row mb-0">
+                <div className="flex-fill d-flex ps-2 ps-md-3 ps-lg-5 ms-0 ms-md-3 ms-lg-5 h-100">
                   <div className="h5 d-flex flex-column pt-3 align-items-stretch lh40">
                     {BELOW_NAME_LINES.map((value, index) => {
                       return (
@@ -178,7 +178,7 @@ const LandingPage = () => {
                 </div>
                 <div
                   ref={checkMoreButtonRef}
-                  className="flex-fill d-flex align-items-center justify-content-end h2 pe-5 mb-0 checkMoreButton"
+                  className="flex-fill d-flex align-items-center justify-content-end h2 pe-md-5 p-4 mb-0 checkMoreButton"
                   onClick={() => {
                     setShowModel(true);
                   }}

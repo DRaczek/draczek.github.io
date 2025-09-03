@@ -1,13 +1,6 @@
-import React from "react";
 import "../css/TwoElementLabel.css";
 
-function TwoElementLabel({
-  containerClassName,
-  firstElement,
-  secondElement,
-  firstElementTextColor,
-}) {
-  console.log(firstElementTextColor);
+function TwoElementLabel({ containerClassName, firstElement, secondElement }) {
   return (
     <div className={"two_element_label " + containerClassName}>
       <label className="m-0">{firstElement}</label>

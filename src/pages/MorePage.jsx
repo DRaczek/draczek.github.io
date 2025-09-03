@@ -8,12 +8,20 @@ import Projects from "../components/Projects";
 import SpaceModelCanvas from "../components/SpaceModelCanvas";
 import AboutSection from "../components/AboutSection";
 
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 gsap.registerPlugin(ScrollToPlugin);
 function MorePage() {
   const [shouldRender, setShouldRender] = useState(true);
   const aboutSectionRef = useRef(null);
+  const landingPageTextDivRef = useRef(null);
 
   useEffect(() => {
+    gsap.timeline().from(landingPageTextDivRef.current, {
+      duration: 1,
+      marginLeft: -100,
+      ease: "power3.out",
+    });
+
     const onScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
       const viewportHeight = window.innerHeight;
@@ -33,6 +41,7 @@ function MorePage() {
           <div
             className="d-flex justify-content-center flex-column bg-transparent p-5 position-absolute"
             id="landing-text"
+            ref={landingPageTextDivRef}
           >
             <p className="h1 mb-4 text-primary fw-bold">
               Making real life solutions for bold ideas
@@ -47,9 +56,9 @@ function MorePage() {
               className="btn btn-primary"
               onClick={() => {
                 gsap.to(window, {
-                  duration: 1.5,
+                  duration: isMobile ? 0.5 : 1.5,
                   scrollTo: aboutSectionRef.current,
-                  ease: "power2.out",
+                  ease: "power3.out",
                 });
               }}
             >
