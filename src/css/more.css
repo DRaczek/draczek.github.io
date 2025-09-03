@@ -8,6 +8,10 @@
     height: 100vh;
 }
 
+#landing-text p{
+    z-index: 100;
+}
+
 #landing-canvas{
     left: 0;
     width: 140vw !important;

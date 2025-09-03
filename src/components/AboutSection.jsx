@@ -17,9 +17,9 @@ export default function AboutSection() {
               </h6>
               <p className="fs-5">
                 I love turning ideas into reality through code. I'm currently
-                exploring both front-end and back-end technologies, but my
-                favourite specialization is back-end. I'm actively trying
-                towards becoming the Full-Stack Developer.
+                exploring both front-end and back-end technologies, but my main
+                interest and preference is back-end development. I'm actively
+                trying towards becoming the Full-Stack Developer.
               </p>
               <div className="row">
                 <div className="col-md-6">
