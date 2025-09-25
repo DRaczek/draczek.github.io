@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# [draczek.github.io](https://draczek.github.io/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website! 🎉  
+This site is a place where I share a bit about myself, my projects, and my journey as a developer.  
 
-## Available Scripts
+## 👨‍💻 About Me
+I’m an aspiring software developer who has recently graduated from technical school and started my computer science studies at university.  
 
-In the project directory, you can run:
+My journey began in primary school, where I first got interested in coding and solving math problems. That curiosity eventually led me to enroll in a technical secondary school with a focus on software development. During those years, I discovered and deepened my passion for programming and technology — building small apps, experimenting with code, and learning how things work under the hood. I enjoy solving problems, whether it’s through writing clean code, automating tasks, or bringing an idea to life on the screen.
 
-### `npm start`
+Although I don’t have much professional experience yet, I’m eager to learn by doing. I take every project, no matter how small, as an opportunity to grow my skills and challenge myself. My main focus right now is building a solid foundation in programming, understanding core computer science concepts, and exploring different areas of software development to find what excites me the most.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Outside of coding, I’m curious about technology trends, enjoy working on personal projects, and like collaborating with others to share knowledge and ideas.    
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 What You’ll Find Here
+- **Some public projects** – small apps, experiments, and learning projects that reflect my progress.  
+- **languages, frameworks, and tools I am exploring**
+- **Contact Info** – ways to reach me if you’d like to connect or collaborate.  
 
-### `npm test`
+## 🌱 Goals
+- Build a strong foundation in programming and computer science.  
+- Gain practical experience through projects and collaborations.  
+- Develop into a professional software engineer.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📬 Contact
+If you’d like to get in touch, you can reach me here:  
+- GitHub: [draczek](https://github.com/draczek)  
+- Email: damian.raczek@proton.me
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for visiting my portfolio! 🚀  
+Stay tuned as I continue learning and building new things.  
