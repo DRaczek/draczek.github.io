@@ -52,7 +52,7 @@ export default function Projects() {
 
         <Project
           addToRefs={addToRefs}
-          link="https://github.com/aruk3101/advertisement_system_pzaw"
+          link="https://github.com/DRaczek/advertisement_system_pzaw"
           title="2024 - Advertisement System - school project - Web App"
           badges={[
             "Java",
