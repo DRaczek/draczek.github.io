@@ -88,7 +88,7 @@ const Timeline = () => {
         <h5 className="fw-bold">
           October 2025
           <br />
-          I applied for an engineering degree in Computer Science with a
+          I started my university studies in Computer Science with a
           specialization in Business Application Development.
           <br />
           WSB-NLU
