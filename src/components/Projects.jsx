@@ -38,6 +38,20 @@ export default function Projects() {
         </h2>
         <Project
           addToRefs={addToRefs}
+          link="https://github.com/DRaczek/StepCounter"
+          title="2025 - Pedometer app - Mobile App"
+          badges={[
+            ".NET MAUI",
+            "C#",
+            "Mobile App (Android)",
+            "sqlite-net-pcl",
+            "Foreground Service",
+            "Syncfusion free toolkit",
+          ]}
+        />
+
+        <Project
+          addToRefs={addToRefs}
           link="https://github.com/aruk3101/advertisement_system_pzaw"
           title="2024 - Advertisement System - school project - Web App"
           badges={[
