@@ -36,6 +36,26 @@ export default function Projects() {
         <h2 className="section-title mb-5 fw-bold h2 position-relative pb-3">
           My Selected Personal Projects
         </h2>
+
+        <Project
+          addToRefs={addToRefs}
+          link="https://github.com/DRaczek/spring_boot_facade_template"
+          title="2025 - Spring Boot REST API starter template with Facade Pattern"
+          badges={[
+            "Java",
+            "Spring Boot",
+            "PostgreSql",
+            "Liquibase",
+            "Swagger",
+            "REST API",
+            "Web App",
+            "MapStruct",
+            "specification-arg-resolver",
+            "Spring Security",
+            "Spring Data JPA",
+          ]}
+        />
+
         <Project
           addToRefs={addToRefs}
           link="https://github.com/DRaczek/StepCounter"
